@@ -1,0 +1,14 @@
+<title>CommonJS demo</title>
+<div id="app"></div>
+<script src="lifecycle.js"></script>
+<script src="loader.js"></script>
+<script src="cjs.js"></script>
+<script>
+  var loader = new CommonJSLoader;
+  loader.baseUrl = "tests";
+
+  loader.import("a").then(function(a){
+    a();
+  });
+
+</script>
