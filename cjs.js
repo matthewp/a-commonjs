@@ -17,6 +17,8 @@
 
   var proto = CommonJSLoader.prototype;
 
+  proto.global = window;
+
   proto.translate = function(id, address, source) {
     return "(function(require, exports, module, __filename, __dirname, global) {\n"
       + source + "\n}).apply(__cjsWrapper.exports, __cjsWrapper.args);";
@@ -32,7 +34,7 @@
     return deps;
   }
 
-  proto.evaluate = function(id, address, source){
+  proto.parse = function(id, address, source){
     // Parse for dependencies
     var deps = getDeps(source);
 

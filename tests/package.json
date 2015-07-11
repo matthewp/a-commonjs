@@ -1,0 +1,8 @@
+{
+  "name": "npm-test",
+  "main": "index.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "a": "1.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+<title>CommonJS demo</title>
+<div id="app"></div>
+<script src="lifecycle.js"></script>
+<script src="loader.js"></script>
+<script src="cjs.js"></script>
+<script src="translate-config.js"></script>
+<script src="semver.js"></script>
+<script src="npm-utils.js"></script>
+<script src="npm-crawl.js"></script>
+<script src="npm.js"></script>
+<script>
+  var loader = new NPMLoader;
+  loader.baseUrl = "tests";
+
+  loader.import("a").then(function(a){
+    console.log("A", a);
+  });
+
+</script>
